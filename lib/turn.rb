@@ -35,7 +35,7 @@ def move(board, index, player = "X")
   board[index] = player
 end
 
-def handle_input
+def handle_input(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
@@ -45,9 +45,9 @@ def handle_input
 end
 
 def turn(board)
-  index = handle_input
+  index = handle_input(board)
   while !index
-    index = handle_input
+    index = handle_input(board)
   end
   move(board, index)
   display_board(board)
