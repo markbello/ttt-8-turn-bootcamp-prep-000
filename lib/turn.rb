@@ -45,6 +45,7 @@ def handle_input
 end
 
 def turn(board)
+  index = handle_input
   while !index
     index = handle_input
   end
